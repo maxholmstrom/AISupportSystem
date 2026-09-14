@@ -1,20 +1,248 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
+    margin: 0;
     font-family: Arial, sans-serif;
-    max-width: 800px;
-    margin: 40px auto;
+    background: #111827;
+    color: #e5e7eb;
+}
+
+/* Header */
+
+.header {
+    background: #0b1220;
+    border-bottom: 1px solid #263244;
+}
+
+.header-content,
+.logo,
+nav,
+.card-header,
+.logo-icon,
+.icon {
+    display: flex;
+    align-items: center;
+}
+
+.header-content {
+    max-width: 1100px;
+    margin: auto;
+    padding: 18px 25px;
+    justify-content: space-between;
+}
+
+.logo {
+    gap: 10px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.logo-icon,
+.icon {
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.logo-icon {
+    width: 38px;
+    height: 38px;
+    background: #e5e7eb;
+    color: #0f4c81;
+}
+
+nav {
+    gap: 25px;
+}
+
+nav a {
+    color: #dbeafe;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: white;
+}
+
+/* Huvudinnehåll */
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 70px 25px;
+}
+
+/* Rubrik */
+
+.hero {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.welcome {
+    color: #60a5fa;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.hero h1 {
+    margin: 12px 0 18px;
+    font-size: 44px;
+    color: #f8fafc;
+}
+
+.hero p {
+    max-width: 620px;
+    margin: auto;
+    color: #9ca3af;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+/* Kort */
+
+.ticket-card,
+.feature {
+    background: #1f2937;
+    border: 1px solid #374151;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+.ticket-card {
+    max-width: 850px;
+    margin: auto;
+    padding: 40px;
+    border-radius: 16px;
+}
+
+.card-header {
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    background: #172554;
+    font-size: 24px;
+}
+
+.card-header h2,
+.feature h3 {
+    margin: 0;
+    color: #f8fafc;
+}
+
+.card-header p,
+.feature p {
+    color: #9ca3af;
+}
+
+.card-header p {
+    margin: 5px 0 0;
+}
+
+/* Formulär */
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
 textarea {
     width: 100%;
+    min-height: 180px;
+    padding: 16px;
+    resize: vertical;
+    border: 1px solid #4b5563;
+    border-radius: 10px;
+    background: #111827;
+    color: #f8fafc;
+    font: inherit;
+    outline: none;
 }
 
+textarea::placeholder {
+    color: #6b7280;
+}
+
+textarea:focus {
+    border-color: #60a5fa;
+    box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.15);
+}
+
+/* Knapp */
+
 button {
-    padding: 10px 20px;
+    margin-top: 20px;
+    padding: 14px 24px;
+    border: 0;
+    border-radius: 9px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
 }
 
-.ticket {
-    border: 1px solid #ccc;
-    padding: 15px;
-    margin-bottom: 15px;
+button:hover {
+    background: #1d4ed8;
+}
+
+/* Informationskort */
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.feature {
+    padding: 28px 22px;
+    border-radius: 14px;
+    text-align: center;
+}
+
+.feature-icon {
+    font-size: 28px;
+}
+
+.feature p {
+    margin: 10px 0 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Footer */
+
+footer {
+    padding: 25px;
+    text-align: center;
+    color: #6b7280;
+    font-size: 13px;
+}
+
+/* Mobil */
+
+@media (max-width: 700px) {
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .ticket-card {
+        padding: 25px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
 }

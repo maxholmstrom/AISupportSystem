@@ -1,28 +1,128 @@
 <!DOCTYPE html>
-<html>
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
-    <title>Skapa ticket</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SupportHub - Skapa ärende</title>
+
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-    <h1>Skapa supportärende</h1>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon">S</div>
+                <span>SupportHub</span>
+            </div>
 
-    <form id="ticketForm">
-        <label for="description">Beskriv ditt problem:</label>
-        <br>
+            <nav>
+                <a href="Index.html">Nytt ärende</a>
+                <a href="tickets.html">Mina ärenden</a>
+            </nav>
+        </div>
+    </header>
 
-        <textarea id="description" rows="8" cols="50"></textarea>
-        <br>
 
-        <button type="submit">Skicka ärende</button>
-    </form>
+    <main class="container">
 
-    <br>
+        <section class="hero">
+            <span class="welcome">SUPPORTCENTER</span>
 
-    <a href="tickets.html">Visa alla tickets</a>
+            <h1>Hur kan vi hjälpa dig?</h1>
+
+            <p>
+                Beskriv ditt problem nedan så analyserar vårt supportsystem
+                automatiskt ärendet och hjälper till att hitta rätt prioritet,
+                kategori och språk.
+            </p>
+        </section>
+
+
+        <section class="ticket-card">
+
+            <div class="card-header">
+                <div class="icon"></div>
+
+                <div>
+                    <h2>Skapa supportärende</h2>
+                    <p>Beskriv ditt problem så tydligt som möjligt.</p>
+                </div>
+            </div>
+
+
+            <form id="ticketForm">
+
+                <label for="description">
+                    Beskriv ditt problem
+                </label>
+
+                <textarea
+                    id="description"
+                    rows="8"
+                    placeholder="Exempel: Jag kan inte logga in på mitt konto..."
+                    required
+                ></textarea>
+
+
+                <button type="submit">
+                    Skicka ärende
+                    <span>→</span>
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <section class="features">
+
+            <div class="feature">
+                <div class="feature-icon"></div>
+
+                <h3>Automatisk analys</h3>
+
+                <p>
+                    Ärendet analyseras automatiskt med hjälp av AI.
+                </p>
+            </div>
+
+
+            <div class="feature">
+                <div class="feature-icon"></div>
+
+                <h3>Automatiska taggar</h3>
+
+                <p>
+                    Systemet identifierar vilken typ av problem det handlar om.
+                </p>
+            </div>
+
+
+            <div class="feature">
+                <div class="feature-icon"></div>
+
+                <h3>Prioritering</h3>
+
+                <p>
+                    Ärendet får automatiskt en prioritet baserat på innehållet.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>© 2026 SupportHub · AI-baserat supportsystem</p>
+    </footer>
+
 
     <script src="script.js"></script>
+
 </body>
 </html>
