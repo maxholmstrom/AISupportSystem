@@ -11,10 +11,19 @@ var client = new TextAnalyticsClient(
     new AzureKeyCredential(key)
 );
 
-
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(policy =>
+        policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
+});
 
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
+
+app.UseDefaultFiles();
+app.UseStaticFiles();
+
+app.MapControllers();
 
 app.MapGet("/", () => "Hello World!");
 
